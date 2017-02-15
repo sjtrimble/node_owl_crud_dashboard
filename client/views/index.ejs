@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Owls</title>
+</head>
+<style>
+* {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #2e2e2e;
+}
+
+body {
+  padding: 20px;
+}
+
+span {
+  font-weight: bold;
+}
+
+</style>
+<body>
+  <h1>Owl Collection</h1>
+  <button><a href="/new">Add Owl</a></button>
+
+  <div id="all-users-block">
+    <% for (var x in allowls) { %>
+    <div>
+      <p><span>Name: </span><%= allowls[x].name %></p>
+      <p><span>Age: </span><%= allowls[x].age %></p>
+      <p><a href="owls/<%= allowls[x].name %>">View Owl</a> <a href="owls/edit/<%= allowls[x].name %>">Edit Owl</a> <a href="owls/destroy/<%= allowls[x].name %>">Delete Owl</a></p>
+      <hr />
+    </div>
+    <% } %>
+  </div>
+
+</body>
+</html>

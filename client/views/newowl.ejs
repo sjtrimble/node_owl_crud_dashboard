@@ -1,0 +1,43 @@
+<html>
+<head>
+  <style>
+  * {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #2e2e2e;
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Owl Info</h1>
+  <button><a href="/">Back</a></button>
+
+  <form action='/owls' method="post">
+    Name: <input type="text" name="name"
+    <% if (thisowl != undefined) { %>value="<%= thisowl.name %>"/>
+    <% } else { %>
+    value=""/>
+      <% } %>
+    Age: <input type="text" name="age"
+    <% if (thisowl != undefined) { %>
+    value="<%= thisowl.age %>"/>
+    <% } else { %>
+    value=""/>
+      <% } %>
+    Image URL: <input type="text" name="image"
+    <% if (thisowl != undefined) { %>
+    value="<%= thisowl.image %>"/>
+    <% } else { %>
+    value=""/>
+      <% } %>
+    <button type="submit">Add Owl</button>
+  </form>
+
+</body>
+</html>
